@@ -1,8 +1,15 @@
 "use client";
 import React from "react";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
+  const handleScrollToContact = () => {
+    const contactSection = document.querySelector("#contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="section-padding bg-hero min-h-screen flex items-center justify-center">
       <div className="container-max text-center">
@@ -29,7 +36,10 @@ export default function Hero() {
 
           {/* CTA button centered */}
           <div className="flex justify-center mt-8">
-            <button className="btn-primary flex items-center gap-3 text-lg px-8 py-4">
+            <button
+              onClick={handleScrollToContact}
+              className="btn-primary flex items-center gap-3 text-lg px-8 py-4"
+            >
               Start Analysis
               <ArrowRight className="w-6 h-6" />
             </button>
