@@ -17,8 +17,7 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "Product", href: "#product" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "#about" }
   ];
 
   const handleNavClick = (href: string) => {
@@ -67,7 +66,9 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <button className="btn-primary">Book a Demo</button>
+            <button
+            onClick={() => handleNavClick("#contact")}
+            className="btn-primary">Book a Demo</button>
           </div>
 
           {/* Mobile menu button */}
@@ -99,7 +100,10 @@ export default function Navbar() {
                 </button>
               ))}
               <div className="pt-4">
-                <button className="btn-primary w-full">Book a Demo</button>
+                <button
+                onClick={() => handleNavClick("#contact")}
+                className="btn-primary w-full">Book a Demo
+                </button>
               </div>
             </div>
           </div>
