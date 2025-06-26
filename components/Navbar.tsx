@@ -47,7 +47,7 @@ export default function Navbar() {
               onClick={() => handleNavClick("#home")}
               className="text-2xl font-bold text-primary-600 hover:text-primary-700 transition-colors"
             >
-              ConstructionAI
+              Minima
             </button>
           </div>
 

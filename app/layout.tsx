@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ConstructionAI - AI-Powered Blueprint Analysis",
+  title: "Minima - AI-Powered Blueprint Analysis and Contract Review",
   description:
     "Analyze architectural blueprints with AI to identify materials, flag construction roadblocks, and optimize site planning.",
 };
