@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-text font-sans min-h-screen;
+    line-height: 1.6;
+  }
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl text-text;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl text-text;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl text-text;
+  }
+  h4 {
+    @apply text-xl md:text-2xl text-text;
+  }
+  a {
+    @apply text-primary hover:underline;
+  }
+  ::selection {
+    @apply bg-primary text-background;
+  }
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-background-800;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-background-700 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-background-600;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-background font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-yellow-glow hover:bg-primary-600 hover:shadow-lg hover:-translate-y-0.5;
+  }
+  .btn-secondary {
+    @apply bg-background-800 text-primary border border-primary font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-background-700 hover:shadow-lg;
+  }
+  .btn-outline {
+    @apply bg-transparent text-primary border border-primary font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:bg-background-700 hover:shadow-sm;
+  }
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+  .card {
+    @apply bg-surface text-text rounded-xl shadow-surface border border-border;
+  }
+  .card-hover {
+    @apply hover:shadow-yellow-glow transition-all duration-300 hover:-translate-y-1;
+  }
+  .nav-link {
+    @apply text-text font-medium transition-colors duration-200 hover:text-primary;
+  }
+  .nav-link-active {
+    @apply text-primary font-semibold;
+  }
+  .headline {
+    @apply text-4xl md:text-5xl font-bold text-text mb-6;
+  }
+  .subheadline {
+    @apply text-xl md:text-2xl text-text-muted mb-8;
+  }
+  .feature-icon {
+    @apply w-12 h-12 text-primary mb-4;
+  }
+  .feature-title {
+    @apply text-xl font-semibold text-text mb-2;
+  }
+  .feature-desc {
+    @apply text-text-muted;
+  }
+  .testimonial-card {
+    @apply card p-6 text-center;
+  }
+  .cta-section {
+    @apply bg-background-800 py-16 px-4 sm:px-6 lg:px-8 text-center rounded-xl shadow-yellow-glow;
+  }
+  .cta-headline {
+    @apply text-3xl md:text-4xl font-bold text-primary mb-4;
+  }
+  .cta-desc {
+    @apply text-lg text-text-muted mb-8;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(90deg, #ffd600 0%, #fff176 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-hero {
+    @apply bg-hero-pattern;
+  }
+}
