@@ -3,7 +3,7 @@ export default function Contact() {
     <div className="section-padding flex justify-center items-center min-h-[400px]">
       <form className="bg-background-800 rounded-2xl shadow-yellow-glow p-8 w-full max-w-xl border border-border">
         <h2 className="text-3xl font-bold text-primary mb-6 text-center">
-          Contact Us
+          Request a Demo
         </h2>
         <div className="mb-4">
           <label htmlFor="name" className="block text-text mb-2 font-semibold">
@@ -51,7 +51,7 @@ export default function Contact() {
           type="submit"
           className="btn-primary w-full text-lg flex justify-center items-center gap-2"
         >
-          Send Message
+          Request Demo
         </button>
       </form>
     </div>
